@@ -8,9 +8,9 @@
     請將 `midterm_314512056.zip` 內的物件解壓縮並放入以下指定路徑： <br>
     "/home/yc-chen/self_driving_cars_ws/midterm01/"
     * 實際架構如下 <br>
-        yc-chen@v:~$ cd self_driving_cars_ws/midterm01/ <br>
-        yc-chen@v:~/self_driving_cars_ws/midterm01$ ls <br>
-        Dockerfile  build  data  devel  docker-compose.yml  ros_entrypoint.sh  save_data  src <br>
+        yc-chen@v: cd self_driving_cars_ws/midterm01/ <br>
+        yc-chen@v: ~/self_driving_cars_ws/midterm01$ ls <br>
+        Dockerfile    docker-compose.yml    ros_entrypoint.sh    save_data    src   <br>
 2. **放置測資 (Data)** <br>
     請將 track1 與 track2 的資料夾放入以下路徑：  <br>
     "/home/yc-chen/self_driving_cars_ws/data/"
@@ -34,15 +34,15 @@
 
 ## 其他補充與進階設定 (Additional Notes)
 
-1. **切換 Track 1 與 Track 2 測資**
-    Launch 檔設定：localization.launch 中已寫好對應的路徑參數。
+1. **切換 Track 1 與 Track 2 測資** <br>
+    Launch 檔設定：localization.launch 中已寫好對應的路徑參數。 <br>
     C++ 程式碼修改：若要切換軌跡，請打開原始碼，在 localization.cpp 中的 Localization(int argc, char** argv) 函式內，更改相對應讀取的參數名稱即可。
 
-2. **輸出平滑化 CSV 檔 (軌跡後處理)**
-    若需將輸出的 TXT 軌跡轉換並優化為 CSV 格式，請使用內附的 Python 腳本：
+2. **輸出平滑化 CSV 檔 (軌跡後處理)** <br>
+    若需將輸出的 TXT 軌跡轉換並優化為 CSV 格式，請使用內附的 Python 腳本： <br>
     1. 打開 txt_to_idx_x_y_yaw.py，至程式碼最下方確認檔案輸入與輸出的邏輯。
-    2. 在 Docker 的 Terminal 中，切換到該腳本所在的目錄：
+    2. 在 Docker 的 Terminal 中，切換到該腳本所在的目錄： <br>
         $ cd /root/midterm/src/localization/processing_codes/
-    3. 貼上指令並執行，即可生成最終的軌跡 CSV 檔。實際的執行指令（例如）：
+    3. 貼上指令並執行，即可生成最終的軌跡 CSV 檔。實際的執行指令（例如）： <br>
         $ python3 txt_to_idx_x_y_yaw.py /root/midterm/src/localization/result/result_1.txt /root/midterm/src/localization/result/result_1.csv
    
