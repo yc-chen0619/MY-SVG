@@ -8,8 +8,8 @@
     請將 `midterm_314512056.zip` 內的物件解壓縮並放入以下指定路徑： <br>
     "/home/yc-chen/self_driving_cars_ws/midterm01/"
     * 實際架構如下 <br>
-        yc-chen@v: cd self_driving_cars_ws/midterm01/ <br>
-        yc-chen@v: ~/self_driving_cars_ws/midterm01$ ls <br>
+        yc-chen@v:$ cd self_driving_cars_ws/midterm01/ <br>
+        yc-chen@v:~/self_driving_cars_ws/midterm01$ ls <br>
         Dockerfile    docker-compose.yml    ros_entrypoint.sh    save_data    src   <br>
 2. **放置測資 (Data)** <br>
     請將 track1 與 track2 的資料夾放入以下路徑：  <br>
@@ -45,4 +45,5 @@
         $ cd /root/midterm/src/localization/processing_codes/
     3. 貼上指令並執行，即可生成最終的軌跡 CSV 檔。實際的執行指令（例如）： <br>
         $ python3 txt_to_idx_x_y_yaw.py /root/midterm/src/localization/result/result_1.txt /root/midterm/src/localization/result/result_1.csv
+   
    
