@@ -5,31 +5,31 @@
 ## 環境安裝與準備 (Environment Setup)
 
 1. **解壓縮專案檔案**
-    請將 `midterm_314512056.zip` 內的物件解壓縮並放入以下指定路徑： 
+    請將 `midterm_314512056.zip` 內的物件解壓縮並放入以下指定路徑： <br>
     "/home/yc-chen/self_driving_cars_ws/midterm01/"
-    * 實際架構如下
-        yc-chen@v:~$ cd self_driving_cars_ws/midterm01/
-        yc-chen@v:~/self_driving_cars_ws/midterm01$ ls
-        Dockerfile  build  data  devel  docker-compose.yml  ros_entrypoint.sh  save_data  src
-2. **放置測資 (Data)**
-    請將 track1 與 track2 的資料夾放入以下路徑： 
+    * 實際架構如下 <br>
+        yc-chen@v:~$ cd self_driving_cars_ws/midterm01/ <br>
+        yc-chen@v:~/self_driving_cars_ws/midterm01$ ls <br>
+        Dockerfile  build  data  devel  docker-compose.yml  ros_entrypoint.sh  save_data  src <br>
+2. **放置測資 (Data)** <br>
+    請將 track1 與 track2 的資料夾放入以下路徑：  <br>
     "/home/yc-chen/self_driving_cars_ws/data/"
-3. **建置與啟動 Docker 容器**
-    打開 Terminal，進入專案目錄並使用 Docker Compose 啟動環境：
-   $ cd /home/yc-chen/self_driving_cars_ws/midterm01/
-   $ sudo docker compose build
+3. **建置與啟動 Docker 容器** <br>
+    打開 Terminal，進入專案目錄並使用 Docker Compose 啟動環境： <br>
+   $ cd /home/yc-chen/self_driving_cars_ws/midterm01/ <br>
+   $ sudo docker compose build <br>
    $ sudo docker compose up -d
-4. **進入 Docker 環境**
+4. **進入 Docker 環境** <br>
    $ sudo docker exec -it midterm01-sdc_ros1_dev-1 bash
 
 ## 程式編譯與執行 (Build & Usage)
 
-1. **進入工作區並編譯**
-    $ cd ~/midterm
+1. **進入工作區並編譯** <br>
+    $ cd ~/midterm <br>
     $ catkin_make
-2. **載入環境變數**
+2. **載入環境變數** <br>
     $ source devel/setup.bash
-3. **啟動 Localization 程式**
+3. **啟動 Localization 程式** <br>
     $ roslaunch localization localization.launch
 
 ## 其他補充與進階設定 (Additional Notes)
